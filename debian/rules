@@ -1,0 +1,37 @@
+#!/usr/bin/make -f
+
+build:
+	dh_testdir
+
+clean:
+	dh_testdir
+	dh_testroot
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k 
+	dh_installdirs
+
+binary-indep: install
+	dh_testdir
+	dh_testroot
+	
+	mkdir -p debian/system-ui-theme-nokia/usr/share/themes/blanco/meegotouch/sysuid/style
+	cp -vR data/* debian/system-ui-theme-nokia/usr/share/themes/blanco/meegotouch/sysuid
+	
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-arch: install
+	dh_testdir
+
+binary: binary-indep binary-arch
+
+
+.PHONY: binary binary-arch binary-indep clean

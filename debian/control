@@ -1,0 +1,11 @@
+Source: system-ui-theme-nokia
+Section: misc
+Priority: optional
+Maintainer: Vesa Halttunen <vesa.halttunen@nokia.com>
+Build-Depends: debhelper
+Standards-Version: 3.7.2
+
+Package: system-ui-theme-nokia
+Architecture: all
+Provides: system-ui-theme-fixed
+Description: Nokia style theme files for system-ui

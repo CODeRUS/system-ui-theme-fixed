@@ -1,0 +1,10 @@
+Package: system-ui-theme-nokia
+Version: 1.3.3-1+0m8
+Architecture: all
+Maintainer: Vesa Halttunen <vesa.halttunen@nokia.com>
+Installed-Size: 52
+Provides: system-ui-theme-fixed
+Section: misc
+Priority: optional
+Description: Nokia style theme files for system-ui
+Aegis-Manifest: empty
