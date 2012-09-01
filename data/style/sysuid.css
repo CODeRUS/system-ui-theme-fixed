@@ -1,4 +1,3 @@
-@import "default.css";
 @import "volume.css";
 
 MWidgetStyle#StatusBarLandscapeWidget {
@@ -31,6 +30,14 @@ StatusIndicatorMenuStyle {
     padding-top: 0;
     notification-area: false;
     background-opacity: 0.8;
+    minimum-size: 100% 0;
+    maximum-size: 100% 100%;
+}
+
+StatusIndicatorMenuStyle.Landscape {
+    minimum-size: 49.2mm 44.4mm;
+    preferred-size: 49.2mm 44.4mm;
+    maximum-size: 49.2mm 44.4mm;
 }
 
 StatusIndicatorMenu MWidgetSlideAnimationStyle#In.Landscape {
@@ -64,8 +71,15 @@ MApplicationExtensionAreaStyle#StatusIndicatorMenuExtensionArea {
 }
 
 MWidgetStyle#StatusIndicatorMenuExtensionAreaWidget {
+    minimum-size: 100% 0;
+    maximum-size: 100% 100%;
     background-image: ;
-    maximum-size: 480 100%;
+}
+
+MWidgetStyle#StatusIndicatorMenuExtensionAreaWidget.Landscape {
+    minimum-size: 49.2mm 0;
+    maximum-size: 49.2mm 44.4mm;
+    background-image: ;
 }
 
 MWidgetStyle#StatusIndicatorMenuBottomSeparator.Portrait {
